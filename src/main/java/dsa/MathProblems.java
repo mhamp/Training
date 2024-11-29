@@ -575,6 +575,11 @@ public class MathProblems {
      *
      * The second game: same, except that the stopping condition is a five followed by a five.
      * @src Daily Coding Problem: Problem #178 [Hard] Two Sigma.
+     *
+     * @eval Generating two dice rolls per iteration doesn't mimic a sequence-based game (where dice are rolled one at a time),
+     * making it less realistic if sequential logic is required. The flags and conditions are unnecessary overhead.
+     * This can be simplified for better readability and performance. See {@link MathProblems#getCostOfRandomDiceThrowSequentially(int, int)}
+     *
      */
     public static int getCostOfRandomDiceThrow(int dice1, int dice2) {
         int counter = 1;
@@ -584,6 +589,8 @@ public class MathProblems {
         }
         return counter;
     }
+
+
     private static boolean isDesiredSequence(int dice1, int dice2, int res1, int res2){
         boolean isFirstMatch = false;
         boolean isDice1 = false;
@@ -609,5 +616,28 @@ public class MathProblems {
         }
         return false;
     }
+    /**
+     * <b>Optimized version</b><br>
+     *
+     * <p>This implementation simulates a realistic sequential gam with a single die roll per iteration. It elminates redundant flags
+     * offering a simplified logic reduces unnecessary overhead and makes the code easier to understand.</p>
+     */
+    public static int getCostOfRandomDiceThrowSequentially(int dice1, int dice2) {
+        int counter = 0;
+        Random rand = new Random();
+        boolean isFirstMatch = false;
 
+        while (true) {
+            int roll = rand.nextInt(6) + 1; // Roll the die (1-6)
+            counter++;
+
+            // Check if the second dice completes the sequence
+            if (isFirstMatch && roll == dice2) {
+                return counter; // Sequence (dice1, dice2) completed
+            }
+
+            // Update sequence state
+            isFirstMatch = (roll == dice1);
+        }
+    }
 }
