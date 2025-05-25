@@ -34,7 +34,7 @@ Java DSA Algorithms DataStructures Sorting Searching Recursion Trees Arrays Stri
 Happy coding!
 
 ***
-License: MIT
+License: [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Author: [Mathias Hamp](https://github.com/mhamp)
 
