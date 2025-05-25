@@ -35,6 +35,8 @@ Happy coding!
 
 ***
 License: MIT
+
 Author: [Mathias Hamp](https://github.com/mhamp)
+
 Last Updated: 2025-05-25
 ***
