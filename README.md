@@ -1,5 +1,7 @@
 # Java DSA & Design Patterns Practice
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.txt)
+
 by [Mathias Hamp](https://github.com/mhamp)  - Munich, October 2024
 
 This project is designed for training and practice in **Data Structures**, **Algorithms (DSA)**, and **Design Patterns** using Java.
@@ -34,7 +36,7 @@ Java DSA Algorithms DataStructures Sorting Searching Recursion Trees Arrays Stri
 Happy coding!
 
 ***
-License: [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+License: [MIT](LICENCE.txt)
 
 Author: [Mathias Hamp](https://github.com/mhamp)
 
